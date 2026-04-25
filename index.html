@@ -328,7 +328,7 @@
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
         <!-- <a class="navbar-brand" href="#">AZA <span>✦</span></a> -->
-        <a class="navbar-brand" href="https://www.azachocolate.com">AZA <img src="./image/Aza__Logo___PNG__2.png" alt="" width="6.5%"/></a>
+        <a class="navbar-brand" href="https://www.azachocolate.com">AZA <span><img src="./image/Aza__Logo___PNG__2.png" alt="" width="80"></span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
             <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
         </button>
@@ -366,7 +366,7 @@
             </div>
             <div class="col-lg-6 text-center" data-aos="fade-left">
                 <!-- <img src="https://placehold.co/600x500/f5e6d3/3B2A1F?text=AZA+Luxury+Hamper" alt="Luxury hampers" class="img-fluid rounded-4 shadow-lg" style="max-height: 380px; object-fit: cover; width: 100%;"> -->
-                <img src="./image/Aza__Logo___PNG__3.png" alt="Luxury hampers" class="img-fluid rounded-4 shadow-lg" style="max-height: 380px; object-fit: cover; width: 100%;">
+                <img src="./image/Aza__Logo___PNG.png"  alt="Luxury hampers" class="img-fluid rounded-4 shadow-sm" style="max-height: 380px; object-fit: cover; width: 90%;">
             </div>
         </div>
     </div>
@@ -617,6 +617,12 @@
         if (existing) existing.quantity += quantity;
         else cart.push({ id: productId, quantity });
         saveCart();
+         // optional subtle notif
+        const btn = document.querySelector(`.add-to-cart-${productId}`);
+        if (btn) {
+            btn.innerHTML = '✓ Added';
+            setTimeout(() => { btn.innerHTML = '<i class="fas fa-shopping-cart me-1"></i> Add to Cart'; }, 1200);
+        }
     }
 
     // Filter & Render Products by Category
@@ -652,7 +658,7 @@
                             <p class="small text-muted">${prod.desc.substring(0, 60)}...</p>
                             <div class="d-flex justify-content-between align-items-center mt-2">
                                 <span class="price">₹${prod.price}</span>
-                                <button class="btn btn-add" onclick="event.stopPropagation(); addToCart(${prod.id}, 1)"><i class="fas fa-shopping-cart me-1"></i> Add</button>
+                                <button class="btn btn-add add-to-cart-${prod.id}" onclick="event.stopPropagation(); addToCart(${prod.id}, 1)"><i class="fas fa-shopping-cart me-1"></i> Add</button>
                             </div>
                         </div>
                     </div>
