@@ -686,7 +686,7 @@
     });
     document.getElementById('previewBuyNow')?.addEventListener('click', () => {
         if(currentPreviewProduct){
-            const phone = "971234567890";
+            const phone = "9747227042";
             const msg = `🛍️ *Direct Order*%0A${currentPreviewProduct.name} x ${previewQuantity} = ₹${currentPreviewProduct.price * previewQuantity}%0A📍 Need airport/Pravasi delivery.`;
             window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
             previewModal.hide();
@@ -701,9 +701,9 @@
         cart.forEach(item => { const prod = products.find(p=>p.id===item.id); if(prod){ const sub=prod.price*item.quantity; totalAmt+=sub; itemsList+=`• ${prod.name} x ${item.quantity} = ₹${sub}\n`; } });
         return `🛍️ *New Order from AZA*%0A%0A📦 Items:%0A${encodeURIComponent(itemsList)}%0A💰 Total: ₹${totalAmt}%0A📍 Delivery: Need airport/Pravasi info. Thank you!`;
     }
-    document.getElementById('whatsappOrderBtn')?.addEventListener('click', () => { if(cart.length===0) alert("Cart empty!"); else window.open(`https://wa.me/971234567890?text=${buildOrderMessage()}`, '_blank'); });
-    document.getElementById('pravasiOrderBtn')?.addEventListener('click', () => { window.open(`https://wa.me/971234567890?text=✨ Pravasi Box enquiry ✨ Need airport delivery options.`, '_blank'); });
-    document.getElementById('inquiryWhatsBtn')?.addEventListener('click', () => { const name=document.getElementById('inqName').value, phone=document.getElementById('inqPhone').value, msg=document.getElementById('inqMsg').value; const fullMsg=`Custom Hamper Inquiry%0AName: ${name||'-'}%0APhone: ${phone||'-'}%0ARequirement: ${msg||'Interested in hampers'}`; window.open(`https://wa.me/971234567890?text=${encodeURIComponent(fullMsg)}`, '_blank'); });
+    document.getElementById('whatsappOrderBtn')?.addEventListener('click', () => { if(cart.length===0) alert("Cart empty!"); else window.open(`https://wa.me/9747227042?text=${buildOrderMessage()}`, '_blank'); });
+    document.getElementById('pravasiOrderBtn')?.addEventListener('click', () => { window.open(`https://wa.me/9747227042?text=✨ Pravasi Box enquiry ✨ Need airport delivery options.`, '_blank'); });
+    document.getElementById('inquiryWhatsBtn')?.addEventListener('click', () => { const name=document.getElementById('inqName').value, phone=document.getElementById('inqPhone').value, msg=document.getElementById('inqMsg').value; const fullMsg=`Custom Hamper Inquiry%0AName: ${name||'-'}%0APhone: ${phone||'-'}%0ARequirement: ${msg||'Interested in hampers'}`; window.open(`https://wa.me/9747227042?text=${encodeURIComponent(fullMsg)}`, '_blank'); });
     
     // Category filter event listeners
     document.querySelectorAll('.filter-btn').forEach(btn => {
