@@ -358,9 +358,10 @@
             }
 
             .admin-sidebar {
-                min-height: auto;
+                max-height: auto;
             }
         }
+
 
         .product-modal-img {
             width: 100%;
@@ -755,7 +756,7 @@
     <div id="adminDashboard" style="display: none;">
         <div class="container-fluid p-0">
             <div class="row g-0">
-                <div class="col-md-2 admin-sidebar p-3">
+                <div class="col-md-2 admin-sidebar p-3" style="z-index: 999;">
                     <h4 class="text-white text-center mb-4">AZA Admin</h4>
                     <div class="nav flex-column">
                         <a href="#" class="nav-link active" data-tab="orders"><i class="fas fa-truck me-2"></i>
@@ -1137,8 +1138,8 @@
             if (cart.length === 0) return "Hello, I'd like to place an order.";
             let items = "",
                 total = 0;
-                let custName = prompt("Enter your name");
-                let custPhone = prompt("Enter your Contact number");
+                // let custName = prompt("Enter your name");
+                // let custPhone = prompt("Enter your Contact number");
             cart.forEach((item) => {
                 const prod = allProducts.find((p) => p.id === item.id);
                 
@@ -1148,7 +1149,7 @@
                 }
             });
             
-            return `🛍️ *New Order from ${custName || "AZA"}*%0A%0A${encodeURIComponent(items)}%0ATotal: ₹${total}%0AContact Number: ${custPhone || ""}%0ALocation: Need Airport/Pravasi delivery.`;
+            return `🛍️ *New Order for AZA Chocolate* %0A%0A${encodeURIComponent(items)}%0ATotal: ₹${total}%0A%0ALocation: Need Airport/Pravasi delivery.`;
         }
         document.getElementById("whatsappOrderBtn")
             ?.addEventListener("click", () => {
