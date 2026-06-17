@@ -1,23 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>AZA | Premium Chocolates, Nuts, Hampers & Gifts – Kerala & GCC</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover" />
+    <title>
+        AZA | Premium Chocolates, Nuts, Hampers & Gifts – Kerala & GCC
+    </title>
     <!-- Bootstrap 5 CSS + Icons + Google Fonts + AOS Library -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="./image/Aza__Logo___PNG__3.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+ <link href="https://cdn.datatables.net/v/bs5/dt-2.3.8/b-3.2.6/fh-4.0.6/datatables.min.css" rel="stylesheet" integrity="sha384-zkImUNcKeAj7yYfFkIXsjg+7WUtPhsPWBj1MdlSsxIyPkxfXGSMJNYKUJ5QnheOW" crossorigin="anonymous">
+<script src="https://cdn.datatables.net/v/bs5/dt-2.3.8/b-3.2.6/fh-4.0.6/datatables.min.js" integrity="sha384-KzIuZGi/KXtcHLZXB3NzztaM4EsvXHIZmgJOJHz65r9vYx0GZNFaTxP7hVtQbAI0" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="./image/aza_logo_png.png" />
     <style>
         :root {
-            --primary: #3B2A1F;
-            --secondary: #C47A2E;
-            --accent: #F5E6D3;
-            --light-bg: #FFF9F2;
-            --dark-text: #2C241A;
-            --gold-light: #E8BC7E;
+            --primary: #3b2a1f;
+            --secondary: #c47a2e;
+            --accent: #f5e6d3;
+            --light-bg: #fff9f2;
+            --dark-text: #2c241a;
+            --gold-light: #e8bc7e;
         }
 
         * {
@@ -27,52 +34,70 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: "Inter", sans-serif;
             background: var(--light-bg);
             color: var(--dark-text);
             scroll-behavior: smooth;
+            overflow-x: hidden;
+            width: 100%;
         }
 
-        h1, h2, h3, h4, .logo-font {
-            font-family: 'Playfair Display', serif;
+        h1,
+        h2,
+        h3,
+        h4,
+        .logo-font {
+            font-family: "Playfair Display", serif;
             font-weight: 600;
         }
 
-        /* Navbar */
         .navbar {
             background: rgba(59, 42, 31, 0.96) !important;
             backdrop-filter: blur(4px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-            padding: 0.05rem 0;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            padding: 0.1rem 0;
         }
+
         .navbar-brand {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 700;
             letter-spacing: 1px;
-            color: #F5E6D3 !important;
+            color: #f5e6d3 !important;
         }
+
         .navbar-brand span {
             color: var(--gold-light);
             font-size: 1.5rem;
         }
+
         .nav-link {
             color: #f8f0e6 !important;
             font-weight: 500;
             margin: 0 0.5rem;
             transition: 0.3s;
         }
-        .nav-link:hover, .nav-link.active {
+
+        .nav-link:hover,
+        .nav-link.active {
             color: var(--gold-light) !important;
         }
-        .cart-icon {
+
+        .cart-icon-btn {
             position: relative;
-            font-size: 1.4rem;
+            background: none;
+            border: none;
             color: white;
+            font-size: 1.5rem;
+            margin-left: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+
         .cart-count {
             position: absolute;
             top: -8px;
-            right: -12px;
+            right: -10px;
             background: var(--secondary);
             color: #1f1a14;
             font-size: 0.7rem;
@@ -85,21 +110,46 @@
             justify-content: center;
         }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(107deg, #FBF4E8 0%, #F5E2CF 100%);
-            padding: 6rem 0 4rem;
-            border-bottom: 2px solid #EEDBBC;
+        .container,
+        .container-fluid {
+            overflow-x: hidden;
         }
+
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            background: linear-gradient(107deg, #fbf4e8 0%, #f5e2cf 100%);
+            padding: 6rem 0 4rem;
+            border-bottom: 2px solid #eedbbc;
+        }
+
         .hero h1 {
             font-size: 3.4rem;
             font-weight: 700;
-            color: #3B2A1F;
+            color: #3b2a1f;
         }
-        .hero .lead {
-            color: #5e4b36;
-            font-size: 1.2rem;
-        }
+/* Search bar styles */
+.search-bar-container {
+    max-width: 400px;
+}
+.search-bar-container input {
+    border-radius: 50px;
+    padding: 10px 20px;
+    border: 2px solid #e0d4c8;
+}
+.search-bar-container input:focus {
+    border-color: var(--secondary);
+    box-shadow: none;
+}
         .btn-gold {
             background: var(--secondary);
             color: #fff;
@@ -109,91 +159,98 @@
             border-radius: 40px;
             transition: 0.3s;
         }
+
         .btn-gold:hover {
             background: #a75f1f;
             transform: translateY(-2px);
-            box-shadow: 0 8px 18px rgba(196,122,46,0.3);
+            box-shadow: 0 8px 18px rgba(196, 122, 46, 0.3);
             color: white;
         }
+
         .btn-outline-dark-brown {
-            border: 2px solid #3B2A1F;
+            border: 2px solid #3b2a1f;
             background: transparent;
             padding: 10px 28px;
             border-radius: 40px;
             font-weight: 500;
             transition: 0.3s;
         }
-        .btn-outline-dark-brown:hover {
-            background: #3B2A1F;
-            color: #fff;
-        }
 
-        /* product cards */
         .product-card {
             background: white;
             border-radius: 28px;
             overflow: hidden;
             transition: all 0.35s ease;
-            box-shadow: 0 12px 24px rgba(0,0,0,0.05);
-            border: 1px solid rgba(196,122,46,0.2);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(196, 122, 46, 0.2);
             height: 100%;
             cursor: pointer;
         }
+
         .product-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 24px 36px rgba(0,0,0,0.1);
+            box-shadow: 0 24px 36px rgba(0, 0, 0, 0.1);
             border-color: var(--gold-light);
         }
+
         .product-img {
             height: 220px;
+            border-radius: 14px;
             object-fit: cover;
             width: 100%;
             background: #F9EFE3;
+            /* background: #f9efe3; */
             padding: 1rem;
             transition: transform 0.3s ease;
         }
+
         .product-card:hover .product-img {
             transform: scale(1.02);
         }
+
         .product-body {
             padding: 1.25rem;
         }
+
         .product-title {
             font-weight: 700;
-            font-size: 1.25rem;
+            font-size: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            min-height: 50px;
         }
+
         .price {
             color: var(--secondary);
             font-weight: 800;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
+
         .btn-add {
             background: var(--primary);
             color: white;
             border-radius: 40px;
-            padding: 8px 20px;
-            font-size: 0.85rem;
+            padding: 6px 16px;
+            font-size: 0.8rem;
             font-weight: 500;
             transition: 0.2s;
             border: none;
         }
-        .btn-add:hover {
-            background: #5a3f2c;
-            color: #fff;
-        }
 
-        /* Category Filter Section */
         .category-filter {
             background: white;
             border-radius: 60px;
             padding: 0.5rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
             border: 1px solid #f0e2d4;
             display: inline-flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 0.5rem;
         }
+
         .filter-btn {
             border: none;
             background: transparent;
@@ -203,64 +260,52 @@
             transition: 0.2s;
             color: #5a4a38;
         }
+
         .filter-btn:hover {
-            background: #F5E6D3;
-            color: #3B2A1F;
+            background: #f5e6d3;
+            color: #3b2a1f;
         }
+
         .filter-btn.active {
             background: var(--secondary);
             color: white;
-            box-shadow: 0 4px 10px rgba(196,122,46,0.3);
+            box-shadow: 0 4px 10px rgba(196, 122, 46, 0.3);
         }
-        .category-section-title {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-        /* Pravasi Box Section */
+
         .pravasi-box {
-            background: linear-gradient(135deg, #2F241B 0%, #1F1913 100%);
-            color: #FFEFD6;
+            background: linear-gradient(135deg, #2f241b 0%, #1f1913 100%);
+            color: #ffefd6;
             border-radius: 3rem;
             padding: 3rem;
         }
-        .pravasi-badge {
-            background: #C47A2E;
-            display: inline-block;
-            padding: 0.3rem 1rem;
-            border-radius: 60px;
-            font-weight: 600;
-            font-size: 0.8rem;
-        }
 
-        /* cart offcanvas */
         .offcanvas {
             background: #fffcf8;
         }
-        .cart-item {
-            border-bottom: 1px solid #ffead4;
-            padding: 1rem 0;
-        }
+
         .whatsapp-btn {
-            background: #25D366;
+            background: #25d366;
             border: none;
             font-weight: bold;
             border-radius: 50px;
             padding: 14px;
             font-size: 1.1rem;
         }
+
         .footer {
-            background: #2B231E;
-            color: #D9C6B0;
+            background: #2b231e;
+            color: #d9c6b0;
         }
+
         .section-title {
             position: relative;
             display: inline-block;
             margin-bottom: 2rem;
             font-weight: 700;
         }
+
         .section-title:after {
-            content: '';
+            content: "";
             position: absolute;
             bottom: -12px;
             left: 0;
@@ -269,21 +314,7 @@
             background: var(--secondary);
             border-radius: 4px;
         }
-        
-        /* Product Preview Modal Styles */
-        .product-modal-img {
-            width: 100%;
-            border-radius: 24px;
-            max-height: 400px;
-            object-fit: cover;
-            background: #F9EFE3;
-            padding: 1rem;
-        }
-        .modal-content {
-            border-radius: 32px;
-            border: none;
-            overflow: hidden;
-        }
+
         .quantity-selector {
             display: flex;
             align-items: center;
@@ -294,6 +325,7 @@
             width: fit-content;
             border: 1px solid #e2d4c8;
         }
+
         .qty-btn {
             background: #f0e4d8;
             border: none;
@@ -302,429 +334,1183 @@
             border-radius: 50%;
             font-weight: bold;
             font-size: 1.2rem;
-            transition: 0.2s;
         }
-        .qty-btn:hover {
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .category-filter {
+                border-radius: 40px;
+                padding: 0.75rem;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .filter-btn {
+                padding: 0.3rem 1rem;
+                font-size: 0.75rem;
+            }
+
+            .product-title {
+                font-size: 0.85rem;
+            }
+
+            .admin-sidebar {
+                min-height: auto;
+            }
+        }
+
+        .product-modal-img {
+            width: 100%;
+            border-radius: 24px;
+            max-height: 400px;
+            object-fit: contain;
+            background: #f9efe3;
+            padding: 1rem;
+        }
+
+        .modal-content {
+            border-radius: 32px;
+            border: none;
+            overflow: hidden;
+        }
+
+        .load-more-btn {
+            background: var(--primary);
+            color: white;
+            border-radius: 50px;
+            padding: 12px 30px;
+            font-weight: 600;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .load-more-btn:hover {
+            background: var(--secondary);
+        }
+
+        .admin-sidebar {
+            background: var(--primary);
+            min-height: 100vh;
+        }
+
+        .admin-sidebar .nav-link {
+            color: #e0d6cc;
+            padding: 12px 20px;
+            border-radius: 12px;
+            margin: 5px 0;
+        }
+
+        .admin-sidebar .nav-link:hover,
+        .admin-sidebar .nav-link.active {
             background: var(--secondary);
             color: white;
         }
-        .preview-qty-num {
-            font-size: 1.2rem;
+
+        .status-badge {
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
             font-weight: 600;
-            min-width: 40px;
-            text-align: center;
         }
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.4rem; }
-            .pravasi-box { padding: 1.8rem; }
-            .category-filter { border-radius: 40px; padding: 0.75rem; }
-            .filter-btn { padding: 0.4rem 1rem; font-size: 0.8rem; }
+
+        .status-confirmed {
+            background: #e3f2fd;
+            color: #0b5ed7;
+        }
+
+        .status-transporting {
+            background: #fff3e0;
+            color: #fd7e14;
+        }
+
+        .status-delivered {
+            background: #d1e7dd;
+            color: #198754;
         }
     </style>
 </head>
+
 <body>
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-        <!-- <a class="navbar-brand" href="#">AZA <span>✦</span></a> -->
-        <a class="navbar-brand" href="https://www.azachocolate.com">AZA <span><img src="./image/Aza__Logo___PNG__2.png" alt="" width="80"></span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
-            <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarMain">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#products">Delights</a></li>
-                <li class="nav-item"><a class="nav-link" href="#pravasi">Pravasi Box</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
-            <button class="btn position-relative" id="cartBtn" style="background: none;" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
-                <i class="fas fa-shopping-bag cart-icon"></i>
-                <span id="cartItemCount" class="cart-count">0</span>
-            </button>
-        </div>
-    </div>
-</nav>
-
-<!-- Hero Section -->
-<section id="home" class="hero" style="margin-top: 76px;">
-    <div class="container">
-        <div class="row align-items-center gy-5">
-            <div class="col-lg-6" data-aos="fade-right">
-                <span class="badge bg-secondary text-white mb-3 px-3 py-2">Kerala • GCC • Worldwide Delivery</span>
-                <h1>Premium Chocolates, Nuts & Hampers</h1>
-                <p class="lead mt-3">Handcrafted luxury gifts, dry fruits, and curated hampers for every occasion. Now with <strong>Pravasi Box</strong> – delivered to airport or doorstep.</p>
-                <div class="mt-4 d-flex gap-3 flex-wrap">
-                    <a href="#products" class="btn btn-gold">Shop Now →</a>
-                    <a href="#pravasi" class="btn btn-outline-dark-brown">Explore Pravasi Box</a>
+    <div id="customerSite">
+        <!-- Navbar with cart icon always visible on mobile -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <span><img src="./image/aza_logo_png.png" alt width="70" /></span></a>
+                <div class="d-flex align-items-center ms-auto order-lg-2">
+                    <!-- Cart Icon Button - always visible (mobile + desktop) -->
+                    <button class="cart-icon-btn" id="mobileCartBtn" data-bs-toggle="offcanvas"
+                        data-bs-target="#cartOffcanvas" aria-label="Cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span id="cartItemCountNav" class="cart-count">0</span>
+                    </button>
+                    <!-- Navbar Toggler for mobile -->
+                    <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon" style="filter: invert(1)"></span>
+                    </button>
                 </div>
-                <div class="mt-4 d-flex gap-4">
-                    <div><i class="fas fa-shipping-fast text-secondary"></i> <span>Airport Delivery</span></div>
-                    <div><i class="fab fa-whatsapp text-secondary"></i> <span>Order via WhatsApp</span></div>
-                </div>
-            </div>
-            <div class="col-lg-6 text-center" data-aos="fade-left">
-                <!-- <img src="https://placehold.co/600x500/f5e6d3/3B2A1F?text=AZA+Luxury+Hamper" alt="Luxury hampers" class="img-fluid rounded-4 shadow-lg" style="max-height: 380px; object-fit: cover; width: 100%;"> -->
-                <img src="./image/Aza__Logo___PNG.png"  alt="Luxury hampers" class="img-fluid rounded-4 shadow-sm" style="max-height: 380px; object-fit: cover; width: 90%;">
-            </div>
-        </div>
-    </div>
-</section>
+                <div class="collapse navbar-collapse order-lg-1" id="navbarMain">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#products">Delights</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pravasi">Pravasi Box</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
 
-<!-- Products Section with Category Filter -->
-<section id="products" class="py-5">
-    <div class="container">
-        <div class="text-center mb-4" data-aos="fade-up">
-            <h2 class="section-title">Our Signature Collection</h2>
-            <p class="text-muted">Chocolates • Nuts • Dry Fruits • Hampers • Gifts</p>
-        </div>
-        <!-- Category Filter Bar -->
-        <div class="d-flex justify-content-center mb-5" data-aos="fade-up" data-aos-delay="100">
-            <div class="category-filter" id="categoryFilter">
-                <button class="filter-btn active" data-category="all">All Products</button>
-                <button class="filter-btn" data-category="chocolate">🍫 Chocolates</button>
-                <button class="filter-btn" data-category="nuts">🌰 Nuts</button>
-                <button class="filter-btn" data-category="dryfruits">🍇 Dry Fruits</button>
-                <button class="filter-btn" data-category="hampers">🎁 Hampers</button>
-                <button class="filter-btn" data-category="gifts">✨ Gifts</button>
-            </div>
-        </div>
-        <!-- Products Grid -->
-        <div class="row g-4" id="productsContainer">
-            <!-- dynamic products from JS -->
-        </div>
-    </div>
-</section>
+                        <div id="admin"></div>
 
-<!-- Pravasi Box Special Section (airport delivery) -->
-<section id="pravasi" class="py-5">
-    <div class="container">
-        <div class="pravasi-box" data-aos="zoom-in">
-            <div class="row align-items-center">
-                <div class="col-md-7">
-                    <span class="pravasi-badge"><i class="fas fa-plane-departure me-1"></i> EXCLUSIVE FOR NRIs</span>
-                    <h2 class="mt-3 display-6 fw-bold">Pravasi Box ✨</h2>
-                    <p class="lead mt-3">Specially curated for Malayali families in GCC & abroad. Includes premium chocolates, Kerala banana chips, dry fruits, and festive sweets. <strong>We deliver directly to Cochin International Airport (COK) & major airports</strong> – just before your flight departure. Hassle-free gifting for your loved ones back home.</p>
-                    <ul class="list-unstyled mt-3">
-                        <li><i class="fas fa-check-circle me-2" style="color:#C47A2E"></i> Handpicked selection of premium dry fruits</li>
-                        <li><i class="fas fa-check-circle me-2" style="color:#C47A2E"></i> Airport meet-up / cargo counter delivery</li>
-                        <li><i class="fas fa-check-circle me-2" style="color:#C47A2E"></i> Customizable for families in UAE, Qatar, KSA</li>
                     </ul>
-                    <button class="btn btn-gold mt-3" id="pravasiOrderBtn"><i class="fab fa-whatsapp me-2"></i> Order Pravasi Box on WhatsApp</button>
-                </div>
-                <div class="col-md-5 text-center mt-4 mt-md-0">
-                    <i class="fas fa-gift" style="font-size: 7rem; color: #E8BC7E;"></i>
-                    <h4 class="mt-3">Pack with love,<br>Deliver with care</h4>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </nav>
 
-<!-- Custom Hamper / Inquiry Section -->
-<section id="contact" class="py-5 bg-white">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6" data-aos="fade-right">
-                <h2 class="section-title">Custom Hampers & Bulk Orders</h2>
-                <p>Need a personalized gift hamper for weddings, corporate events, or festivals? We blend tradition with taste. Contact our team for bespoke hampers including chocolates, dry fruits, and premium nuts.</p>
-                <div class="mt-4">
-                    <i class="fas fa-map-marker-alt me-2 text-secondary"></i> Near Hilite Mall, chemmad, Kerala | Serving GCC & Worldwide<br>
-                    <i class="fab fa-whatsapp me-2 text-secondary"></i> +91 8943075000 (WhatsApp)<br>
-                    <i class="far fa-envelope me-2 text-secondary"></i> hello@azagifts.com
-                </div>
-            </div>
-            <div class="col-lg-6" data-aos="fade-left">
-                <div class="card border-0 shadow-sm rounded-4 p-4">
-                    <h4>Quick inquiry <i class="fab fa-whatsapp text-success"></i></h4>
-                    <input type="text" class="form-control mb-3" placeholder="Your Name" id="inqName">
-                    <input type="text" class="form-control mb-3" placeholder="WhatsApp Number" id="inqPhone">
-                    <textarea rows="3" class="form-control mb-3" placeholder="Tell us about your hamper requirements..." id="inqMsg"></textarea>
-                    <button class="btn btn-gold" id="inquiryWhatsBtn"><i class="fab fa-whatsapp me-2"></i> Send via WhatsApp</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer pt-5 pb-4 mt-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <h4 class="text-white">AZA <span class="text-secondary">✦</span></h4>
-                <p>Premium Chocolate, Nuts, Dry Fruits & Hampers – Kerala & GCC's finest gifting destination. Pravasi box & airport delivery specialists.</p>
-            </div>
-            <div class="col-md-4">
-                <h5 class="text-white">Quick Links</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#products" class="text-secondary text-decoration-none">Shop</a></li>
-                    <li><a href="#pravasi" class="text-secondary text-decoration-none">Pravasi Box</a></li>
-                    <li><a href="#" class="text-secondary text-decoration-none">Corporate Gifting</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h5 class="text-white">Follow us</h5>
-                <div class="fs-4">
-                    <i class="fab fa-instagram me-3 text-secondary"></i>
-                    <i class="fab fa-facebook me-3 text-secondary"></i>
-                </div>
-                <p class="mt-3">© 2025 AZA – All sweets reserved.</p>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- Cart Offcanvas (WhatsApp Order) -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartLabel">
-    <div class="offcanvas-header border-bottom">
-        <h5 class="offcanvas-title" id="cartLabel"><i class="fas fa-shopping-bag me-2"></i>Your Order Box</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-        <div id="cartItemsList"></div>
-        <hr>
-        <div class="d-flex justify-content-between fw-bold">
-            <span>Total:</span>
-            <span id="cartTotal">₹0</span>
-        </div>
-        <div class="mt-4">
-            <button class="btn whatsapp-btn w-100" id="whatsappOrderBtn"><i class="fab fa-whatsapp me-2"></i> Place Order via WhatsApp</button>
-            <p class="small text-muted mt-2 text-center">✅ No payment gateway — complete order on WhatsApp. We’ll confirm delivery & airport options.</p>
-        </div>
-    </div>
-</div>
-
-<!-- Product Preview Modal (Full product detail page experience) -->
-<div class="modal fade" id="productPreviewModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0 pb-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body p-4 p-lg-5">
-                <div class="row g-4">
-                    <div class="col-md-6">
-                        <img id="previewImg" class="product-modal-img" src="" alt="Product Preview">
-                    </div>
-                    <div class="col-md-6">
-                        <h3 id="previewName" class="fw-bold" style="font-family: 'Playfair Display'">Product Name</h3>
-                        <p id="previewCategory" class="text-secondary text-uppercase small mt-2"><span class="badge bg-light text-dark">Category</span></p>
-                        <p id="previewDesc" class="mt-3 text-muted">Description</p>
-                        <div class="price mt-3" id="previewPrice">₹0</div>
-                        <div class="mt-4">
-                            <div class="quantity-selector">
-                                <button class="qty-btn" id="previewQtyMinus">−</button>
-                                <span id="previewQtyNum" class="preview-qty-num">1</span>
-                                <button class="qty-btn" id="previewQtyPlus">+</button>
-                            </div>
-                        </div>
+        <!-- Hero Section -->
+        <section id="home" class="hero" style="margin-top: 76px">
+            <div class="container">
+                <div class="row align-items-center gy-5">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <span class="badge bg-secondary text-white mb-3 px-3 py-2">Kerala
+                            • GCC • Worldwide Delivery</span>
+                        <h1>Premium Chocolates, Nuts & Hampers</h1>
+                        <p class="lead mt-3">
+                            Handcrafted luxury gifts, dry fruits, and curated
+                            hampers for
+                            every occasion. Now with <strong>Pravasi
+                                Box</strong> – delivered
+                            to airport or doorstep.
+                        </p>
                         <div class="mt-4 d-flex gap-3 flex-wrap">
-                            <button class="btn btn-gold flex-grow-1" id="previewAddToCartBtn"><i class="fas fa-shopping-cart me-2"></i> Add to Cart</button>
-                            <button class="btn btn-outline-dark-brown" id="previewBuyNow"><i class="fab fa-whatsapp me-2"></i> Buy Now</button>
+                            <a href="#products" class="btn btn-gold">Shop Now
+                                →</a>
+                            <a href="#pravasi" class="btn btn-outline-dark-brown">Explore
+                                Pravasi Box</a>
+                        </div>
+                        <div class="mt-4 d-flex gap-4">
+                            <div>
+                                <i class="fas fa-shipping-fast text-secondary"></i>
+                                <span>Airport Delivery</span>
+                            </div>
+                            <div>
+                                <i class="fab fa-whatsapp text-secondary"></i>
+                                <span>Order via WhatsApp</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-center" data-aos="fade-left">
+                        <!-- <img src="https://placehold.co/600x500/f5e6d3/3B2A1F?text=AZA+Luxury+Hamper" alt="Luxury hampers"
+                        class="img-fluid rounded-4 shadow-lg"
+                        style="max-height: 380px; object-fit: cover; width: 100%;"> -->
+                        <img src="./image/Aza_Post.jpeg" alt="Luxury hampers" class="img-fluid rounded-4 shadow-sm"
+                            style="max-height: 480px; object-fit: fill; width: 100%" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="py-5">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="section-title">Our Complete Collection</h2>
+                    <p class="text-muted">
+                        Chocolates • Nuts • Dry Fruits • Hampers • Gifts •
+                        Beverages
+                    </p>
+                </div>
+                <div class="d-flex justify-content-center mb-3">
+                    <div class="search-bar-container w-100" style="max-width: 500px;">
+                        <input type="text" id="productSearchInput" class="form-control"
+                            placeholder="🔍 Search products by name or category...">
+                    </div>
+                </div>
+            
+                <div class="d-flex justify-content-center mb-5">
+                    <div class="category-filter" id="categoryFilter">
+                        <button class="filter-btn active" data-category="all">
+                            All Products</button><button class="filter-btn" data-category="CHOCOLATE">
+                            🍫 Chocolates</button><button class="filter-btn" data-category="NUTS">
+                            🌰 Nuts & Seeds</button><button class="filter-btn" data-category="DRYFRUIT">
+                            🍇 Dry Fruits</button><button class="filter-btn" data-category="DATES">🌴
+                            Dates</button><button class="filter-btn" data-category="DRINKS">
+                            🥤 Beverages</button><button class="filter-btn" data-category="BIRTHDAY">
+                            🎁 Gifts & Sprays
+                        </button>
+                    </div>
+                </div>
+                <div class="row g-4" id="productsContainer"></div>
+                <div class="text-center mt-5" id="loadMoreContainer">
+                    <button class="load-more-btn" id="loadMoreBtn">
+                        Load More Products
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="pravasi" class="py-5">
+            <div class="container">
+                <div class="pravasi-box">
+                    <div class="row align-items-center">
+                        <div class="col-md-7">
+                            <span class="pravasi-badge"><i class="fas fa-plane-departure me-1"></i>
+                                EXCLUSIVE FOR
+                                NRIs</span>
+                            <h2 class="mt-3 display-6 fw-bold">Pravasi Box
+                                ✨</h2>
+                            <p class="lead mt-3">
+                                Specially curated for Malayali families in GCC &
+                                abroad.
+                                Includes premium chocolates, Kerala banana
+                                chips, dry fruits,
+                                and festive sweets.
+                                <strong>We deliver directly to Cochin
+                                    International Airport (COK) &
+                                    major airports</strong>.
+                            </p>
+                            <button class="btn btn-gold mt-3" id="pravasiOrderBtn">
+                                <i class="fab fa-whatsapp me-2"></i> Order
+                                Pravasi Box on
+                                WhatsApp
+                            </button>
+                        </div>
+                        <div class="col-md-5 text-center">
+                            <i class="fas fa-gift" style="font-size: 7rem; color: #e8bc7e"></i>
+                            <h4 class="mt-3">Pack with love, Deliver with
+                                care</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-5 bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2 class="section-title">Custom Hampers & Bulk
+                            Orders</h2>
+                        <p>
+                            Need a personalized gift hamper for weddings,
+                            corporate events, or
+                            festivals? Contact our team for bespoke hampers.
+                        </p>
+                        <div class="mt-4">
+                            <i class="fas fa-map-marker-alt me-2 text-secondary"></i>
+
+                            Kerala | Serving GCC & Worldwide<br /><i class="fab fa-whatsapp me-2 text-secondary"></i>
+                            +91 89 43 07 5000 (WhatsApp)
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm rounded-4 p-4">
+                            <h4>
+                                Quick inquiry <i class="fab fa-whatsapp text-success"></i>
+                            </h4>
+                            <input type="text" class="form-control mb-3" placeholder="Your Name" id="inqName" /><input
+                                type="text" class="form-control mb-3" placeholder="WhatsApp Number"
+                                id="inqPhone" /><textarea rows="3" class="form-control mb-3"
+                                placeholder="Tell us about your hamper requirements..." id="inqMsg"></textarea><button
+                                class="btn btn-gold" id="inquiryWhatsBtn">
+                                <i class="fab fa-whatsapp me-2"></i> Send via
+                                WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer pt-5 pb-4 mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4 class="text-white">
+                            AZA <span class="text-secondary">✦</span>
+                        </h4>
+                        <p>
+                            Premium Chocolate, Nuts, Dry Fruits & Hampers –
+                            Kerala & GCC's
+                            finest gifting destination.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="text-white">Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#products" class="text-secondary text-decoration-none">Shop</a>
+                            </li>
+                            <li>
+                                <a href="#pravasi" class="text-secondary text-decoration-none">Pravasi
+                                    Box</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="text-white">Follow us</h5>
+                        <div class="fs-4">
+                            <i class="fab fa-instagram me-3 text-secondary"></i><i
+                                class="fab fa-facebook me-3 text-secondary"></i>
+                        </div>
+                        <p class="mt-3">© 2025 AZA – All sweets reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas">
+            <div class="offcanvas-header border-bottom">
+                <h5 class="offcanvas-title">
+                    <i class="fas fa-shopping-bag me-2"></i>Your Order Box
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div id="cartItemsList"></div>
+                <hr />
+                <div class="d-flex justify-content-between fw-bold">
+                    <span>Total:</span><span id="cartTotal">₹0</span>
+                </div>
+                <div class="mt-4">
+                    <button class="btn whatsapp-btn w-100" id="whatsappOrderBtn">
+                        <i class="fab fa-whatsapp me-2"></i> Place Order via
+                        WhatsApp
+                    </button>
+                    <p class="small text-muted mt-2 text-center">
+                        ✅ No payment gateway — complete order on WhatsApp.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade modal-dismissible" id="productPreviewModal" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0 pb-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body p-4 p-lg-5">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <img id="previewImg" class="product-modal-img" src />
+                            </div>
+                            <div class="col-md-6">
+                                <h3 id="previewName" class="fw-bold">Product
+                                    Name</h3>
+                                <p id="previewCategory" class="text-secondary small mt-2"></p>
+                                <p id="previewDesc" class="mt-3 text-muted"></p>
+                                <div class="price mt-3" id="previewPrice">₹0</div>
+                                <div class="mt-4">
+                                    <div class="quantity-selector">
+                                        <button class="qty-btn" id="previewQtyMinus">−</button><span id="previewQtyNum"
+                                            class="preview-qty-num">1</span><button class="qty-btn"
+                                            id="previewQtyPlus">+</button>
+                                    </div>
+                                </div>
+                                <div class="mt-4 d-flex gap-3">
+                                    <button class="btn btn-gold flex-grow-1" id="previewAddToCartBtn">
+                                        <i class="fas fa-shopping-cart me-2"></i>
+                                        Add to Cart</button><button class="btn btn-outline-dark-brown"
+                                        id="previewBuyNow">
+                                        <i class="fab fa-whatsapp me-2"></i> Buy
+                                        Now
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- ADMIN LOGIN MODAL -->
+    <div class="modal fade" id="adminLoginModal" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4">
+                <div class="modal-header">
+                    <h5><i class="fas fa-shield-alt"></i> Admin Login</h5>
+                </div>
+                <div class="modal-body"><input type="password" id="adminPassword" class="form-control"
+                        placeholder="Admin Password">
+                    <div id="loginError" class="text-danger small mt-2 d-none">Wrong password</div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-secondary"
+                        data-bs-dismiss="modal">Cancel</button><button class="btn btn-gold"
+                        id="submitAdminLogin">Login</button></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADMIN DASHBOARD -->
+    <div id="adminDashboard" style="display: none;">
+        <div class="container-fluid p-0">
+            <div class="row g-0">
+                <div class="col-md-2 admin-sidebar p-3">
+                    <h4 class="text-white text-center mb-4">AZA Admin</h4>
+                    <div class="nav flex-column">
+                        <a href="#" class="nav-link active" data-tab="orders"><i class="fas fa-truck me-2"></i>
+                            Orders</a>
+                        <a href="#" class="nav-link" data-tab="products"><i class="fas fa-box me-2"></i> Products</a>
+                        <a href="#" class="nav-link" id="logoutAdminBtn"><i class="fas fa-sign-out-alt me-2"></i>
+                            Logout</a>
+                    </div>
+                </div>
+                <div class="col-md-10 p-4" style="background: #f8f4ef;">
+                    <div class="d-flex justify-content-between">
+                        <h2><i class="fas fa-chart-line"></i> Dashboard</h2><span class="badge bg-secondary">Secure
+                            Zone</span>
+                    </div>
+                    <div id="ordersTab">
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-body">
+                                <h4>Order Management</h4>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover bg-white rounded-4">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Customer</th>
+                                        <th>Items</th>
+                                        <th>Total</th>
+                                        <th>Status</th>
+                                        <th>Date</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ordersTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="productsTab" style="display: none;">
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-body d-flex justify-content-between">
+                                <h4>Product Inventory</h4><button class="btn btn-gold" id="addProductBtn"><i
+                                        class="fas fa-plus"></i> Add Product</button>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover bg-white rounded-4 display" id="productsTable">
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Name</th>
+                                        <th>Category</th>
+                                        <th>Price</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="productsTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="modal fade" id="productModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 id="productModalTitle">Add Product</h5><button class="btn-close"
+                        data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body"><input type="hidden" id="productId"><input type="text" id="prodName"
+                        class="form-control mb-2" placeholder="Name">
+
+                    <select id="prodCategory" class="form-select mb-2">
+                        <option selected disabled>Select Category</option>
+                        <option>CHOCOLATE</option>
+                        <option>DARK CHOCOLATE</option>
+                        <option>COCOA POWDER</option>
+                        <option>DRINKING POWDER</option>
+                        <option>MILK POWDER</option>
+                        <option>POWDER</option>
+                        <option>COCOA SPREAD</option>
+                        <option>SPREAD CREAM</option>
+                        <option>CREAM</option>
+                        <option>BUTTER</option>
+                        <option>PERFUME</option>
+                        <option>OIL</option>
+                        <option>OLIVES</option>
+                        <option>SYRUP</option>
+                        <option>CHIPS</option>
+                        <option>MASHMELLOW</option>
+                        <option>JELLY</option>
+                        <option>TABLETE</option>
+                        <option>DRY FRUIT</option>
+                        <option>NUTS</option>
+                        <option>SUGAR</option>
+                        <option>DATES</option>
+                        <option>SEED</option>
+                        <option>BOTTLE</option>
+                        <option>FRUIT</option>
+                        <option>SPICY</option>
+                        <option>BIRTHDAY</option>
+                        <option>HAMPERS</option>
+                    </select>
+                    <input type="number" id="prodStock" class="form-control mb-2" placeholder="Stock">
+                    <select id="prodUnit" class="form-control form-select mb-2">
+                        <option selected disabled>Select Unit</option>
+                        <option value="KG">KG</option>
+                        <option value="PCS">PCS</option>
+                    </select>
+                    <input type="number" id="prodPrice" class="form-control mb-2" placeholder="Price">
+                    <img id="preview" width="150" >
+                    <input type="file" id="prodImage" class="form-control form-control-file mb-2" accept="image/*">
+                    <input type="hidden"  id="oldUrl" name="oldImageUrl">
+                </div>
+                <div class="modal-footer"><button class="btn btn-secondary"
+                        data-bs-dismiss="modal">Cancel</button><button class="btn btn-gold"
+                        id="saveProductBtn">Save</button></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.datatables.net/v/bs5/dt-2.3.8/b-3.2.6/fh-4.0.6/datatables.min.js" integrity="sha384-KzIuZGi/KXtcHLZXB3NzztaM4EsvXHIZmgJOJHz65r9vYx0GZNFaTxP7hVtQbAI0" crossorigin="anonymous"></script>
+    
 <script>
-    AOS.init({ duration: 800, once: true });
+    $(document).ready(function () {
+        $('#productsTable').DataTable();
+    });
+</script>
+    <script type="module">
+        AOS.init({ duration: 800, once: true });
 
-    // ---------- ENHANCED PRODUCT LIST WITH CATEGORIES ----------
-    const products = [
-        { id: 1, name: "Belgian Chocolate Assortment", category: "chocolate", price: 899, image: "https://placehold.co/600x500/EFD8C3/3B2A1F?text=Praline+Box", desc: "Luxury pralines & truffles. A symphony of Belgian dark, milk & white chocolates.", fullDesc: "Handcrafted Belgian chocolate assortment featuring 12 exquisite pralines. Cocoa from sustainable farms. Ideal for anniversaries." },
-        { id: 2, name: "Premium Almonds & Cashews", category: "nuts", price: 649, image: "https://placehold.co/600x500/E9DACB/3B2A1F?text=Premium+Nuts", desc: "Roasted & salted premium mix of California almonds and whole cashews.", fullDesc: "Crunchy fresh nuts, lightly roasted with Himalayan pink salt. Rich in healthy fats." },
-        { id: 3, name: "Royal Dry Fruit Hamper", category: "dryfruits", price: 1499, image: "https://placehold.co/600x500/EADBCE/3B2A1F?text=Dry+Fruit+Hamper", desc: "Dates, apricots, figs, walnuts & more in a decorative gift box.", fullDesc: "Regal selection: Medjool dates, Turkish apricots, dried figs, walnuts, pistachios." },
-        { id: 4, name: "Celebration Gift Hamper", category: "hampers", price: 2499, image: "https://placehold.co/600x500/EDDFD1/3B2A1F?text=Gift+Hamper", desc: "Chocolates + nuts + dry fruits + greeting card in woven basket.", fullDesc: "Ultimate hamper includes Belgian chocolates, nuts, dry fruits, candle & greeting card." },
-        { id: 5, name: "GCC Special Tin", category: "gifts", price: 1199, image: "https://placehold.co/600x500/F2E5D8/3B2A1F?text=GCC+Edition", desc: "Elegant travel-friendly tin with chocolate dates & premium nuts.", fullDesc: "Gulf returnee special: chocolate-coated dates, roasted cashews, Omani halwa piece." },
-        { id: 6, name: "Dark Chocolate Sea Salt", category: "chocolate", price: 550, image: "https://placehold.co/600x500/FBEADB/3B2A1F?text=Dark+Choc", desc: "Vegan friendly 72% dark chocolate with caramelized sea salt.", fullDesc: "Intense 72% dark chocolate ganache with vanilla and flaky sea salt. Plant based." },
-        { id: 7, name: "Pistachio & Cranberry Jar", category: "nuts", price: 799, image: "https://placehold.co/600x500/F0E2D2/3B2A1F?text=Pistachio+Jar", desc: "Premium pistachios & dried cranberries in a gift jar.", fullDesc: "American pistachios and dried cranberries blend. Sweet & salty gourmet snack." },
-        { id: 8, name: "Airport Pravasi Combo", category: "hampers", price: 1899, image: "https://placehold.co/600x500/EAD3BE/3B2A1F?text=Pravasi+Travel+Box", desc: "Compact airport-friendly hamper with Kerala chips & halwa.", fullDesc: "Perfect for NRIs flying back: banana chips, assorted halwa, chocolates, dry fruits." },
-        { id: 9, name: "Medjool Dates Box", category: "dryfruits", price: 699, image: "https://placehold.co/600x500/F2E1CF/3B2A1F?text=Medjool+Dates", desc: "Premium large Medjool dates, naturally sweet and soft.", fullDesc: "Handpicked Medjool dates from California — perfect for gifting or Ramadan." },
-        { id: 10, name: "Assorted Chocolate Truffles", category: "chocolate", price: 1099, image: "https://placehold.co/600x500/EEDCC8/3B2A1F?text=Truffles", desc: "Grand assortment of champagne, caramel & hazelnut truffles.", fullDesc: "12-piece luxury truffle collection. Ideal for special occasions." }
-    ];
+        //supabase
+        import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
-    let cart = JSON.parse(localStorage.getItem('aza_cart')) || [];
-    let currentFilter = "all";
+        // Replace with your values
+        const supabaseUrl = 'https://hflnraoikdcchxdzgggq.supabase.co'
+        const supabaseKey = 'sb_publishable_TR9bpevsfd9IkpKBNzdHrg_94P4G4M_'
 
-    function saveCart() {
-        localStorage.setItem('aza_cart', JSON.stringify(cart));
-        updateCartUI();
-    }
+        const supabase = createClient(supabaseUrl, supabaseKey)
+        // Full product list from spreadsheet (250+ items)
 
-    function updateCartUI() {
-        const count = cart.reduce((sum, item) => sum + item.quantity, 0);
-        document.getElementById('cartItemCount').innerText = count;
-        renderCartOffcanvas();
-    }
 
-    function renderCartOffcanvas() {
-        const container = document.getElementById('cartItemsList');
-        if (!container) return;
-        if (cart.length === 0) {
-            container.innerHTML = `<div class="text-center text-muted py-4">Your hamper basket is empty. Add delicious goodies!</div>`;
-            document.getElementById('cartTotal').innerText = `₹0`;
-            return;
+        async function ListProduct() {
+            // fecth products
+            const { data, error } = await supabase
+                .from('products')
+                .select('*')
+                .order('id', { ascending: true })
+
+            if (error) {
+                console.log(error)
+                return
+            }
+
+            // console.log(rawProducts);
+            return data;
         }
-        let html = '';
-        let total = 0;
-        cart.forEach((item) => {
-            const prod = products.find(p => p.id === item.id);
-            if (!prod) return;
-            const itemTotal = prod.price * item.quantity;
-            total += itemTotal;
-            html += `
-                <div class="cart-item d-flex justify-content-between align-items-center">
-                    <div>
-                        <strong>${prod.name}</strong><br>
-                        <small>₹${prod.price} x ${item.quantity}</small>
-                    </div>
-                    <div>
-                        <span class="fw-bold me-3">₹${itemTotal}</span>
-                        <button class="btn btn-sm btn-outline-secondary me-1" onclick="updateQty(${item.id}, ${item.quantity - 1})">-</button>
-                        <span class="mx-1">${item.quantity}</span>
-                        <button class="btn btn-sm btn-outline-secondary" onclick="updateQty(${item.id}, ${item.quantity + 1})">+</button>
-                        <button class="btn btn-sm text-danger ms-2" onclick="removeItem(${item.id})"><i class="fas fa-trash-alt"></i></button>
-                    </div>
-                </div>`;
-        });
-        container.innerHTML = html;
-        document.getElementById('cartTotal').innerText = `₹${total}`;
-    }
+        const rawProducts = await ListProduct();
+       
 
-    window.updateQty = (id, newQty) => {
-        if (newQty <= 0) {
-            cart = cart.filter(item => item.id !== id);
-        } else {
-            const index = cart.findIndex(i => i.id === id);
-            if (index !== -1) cart[index].quantity = newQty;
-        }
-        saveCart();
-    };
-    window.removeItem = (id) => {
-        cart = cart.filter(item => item.id !== id);
-        saveCart();
-    };
+        let allProducts = [...rawProducts];
+        // console.log(allProducts);
+        let cart = JSON.parse(localStorage.getItem("aza_cart_final")) || [];
+        //  localStorage.clear();
+        //console.log(cart);
+        let currentFilter = "all";
+        let visibleCount = 24;
+        let productSearchQuery = "";
 
-    function addToCart(productId, quantity = 1) {
-        const existing = cart.find(item => item.id === productId);
-        if (existing) existing.quantity += quantity;
-        else cart.push({ id: productId, quantity });
-        saveCart();
-         // optional subtle notif
-        const btn = document.querySelector(`.add-to-cart-${productId}`);
-        if (btn) {
-            btn.innerHTML = '✓ Added';
-            setTimeout(() => { btn.innerHTML = '<i class="fas fa-shopping-cart me-1"></i> Add to Cart'; }, 1200);
+        function saveCart() {
+            localStorage.setItem("aza_cart_final", JSON.stringify(cart));
+            updateCartUI();
         }
-    }
+        //console.log(cart);
+        function updateCartUI() {
+            const count = cart.reduce((sum, item) => sum + item.qty, 0);
+            //console.log(count);
+            document.getElementById("cartItemCountNav").innerText = count;
+            renderCartOffcanvas();
+        }
+        function renderCartOffcanvas() {
+            const container = document.getElementById("cartItemsList");
+            if (!container) return;
+            if (cart.length === 0) {
+                container.innerHTML =
+                    '<div class="text-center text-muted py-4">Cart empty</div>';
+                document.getElementById("cartTotal").innerText = "₹0";
+                return;
+            }
+            let html = "",
+                total = 0;
+            cart.forEach((item) => {
+                const prod = allProducts.find((p) => p.id === item.id);
+                // console.log(prod);
+                if (prod) {
+                    const itt = prod.price * item.qty;
+                    total += itt;
+                    html += `<div class="cart-item d-flex justify-content-between"><div><strong>${prod.product_name}</strong><br><small>₹${prod.price} x ${item.qty}</small></div><div><span class="fw-bold me-2">₹${itt}</span><button class="btn btn-sm btn-outline-secondary me-1" onclick="updateQty(${item.id},${item.qty - 1})">-</button><span class="mx-1">${item.qty}</span><button class="btn btn-sm btn-outline-secondary" onclick="updateQty(${item.id},${item.qty + 1})">+</button><button class="btn btn-sm text-danger ms-2" onclick="removeItem(${item.id})"><i class="fas fa-trash"></i></button></div></div>`;
+                }
+            });
+            container.innerHTML = html;
+            document.getElementById("cartTotal").innerText = `₹${total}`;
+        }
+        window.updateQty = (id, newQty) => {
+            if (newQty <= 0) cart = cart.filter((i) => i.id !== id);
+            else {
+                const idx = cart.findIndex((i) => i.id === id);
+                if (idx !== -1) cart[idx].qty = newQty;
+            }
+            saveCart();
+        };
+        window.removeItem = (id) => {
+            cart = cart.filter((i) => i.id !== id);
+            saveCart();
+        };
+        function addToCart(product, id, qty = 1) {
+            const existing = cart.find((i) => i.id === id);
+            if (existing) existing.qty += qty;
+            else cart.push({ id: id, name: product.name, qty, price: product.price });
+            saveCart();
+            showToast(`Added ${product.name}`); // Visual feedback on button
+            const btn = document.querySelector(`#btn-${id}`);
+            if (btn) {
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check me-1"></i> Added!';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                }, 1000);
+            }
+        }
+        function showToast(msg) {
+            let t = document.createElement("div");
+            t.className = "position-fixed bottom-0 end-0 p-3 z-3";
+            t.innerHTML = `<div class="bg-success text-white px-4 py-2 rounded-3 shadow">${msg}</div>`;
+            document.body.appendChild(t);
+            setTimeout(() => t.remove(), 2000);
+        }
 
-    // Filter & Render Products by Category
-    function filterProductsByCategory(category) {
-        currentFilter = category;
-        // Update active button style
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            if (btn.getAttribute('data-category') === category) btn.classList.add('active');
-            else btn.classList.remove('active');
-        });
-        renderProductsGrid();
-    }
+        async function filterProducts() {
 
-    function renderProductsGrid() {
-        const container = document.getElementById('productsContainer');
-        if (!container) return;
-        let filtered = [...products];
-        if (currentFilter !== 'all') {
-            filtered = products.filter(p => p.category === currentFilter);
+
+            let filtered =
+                currentFilter === "all"
+                    ? allProducts
+                    : allProducts.filter((p) => p.category === currentFilter);
+
+                        if (productSearchQuery.trim() !== '') {
+                const query = productSearchQuery.toLowerCase().trim();
+                filtered = filtered.filter(p =>
+                    p.product_name.toLowerCase().includes(query) ||
+                    p.category.toLowerCase().includes(query)
+                );
+            }
+            
+            //console.log(filtered);
+            return filtered;
         }
-        if (filtered.length === 0) {
-            container.innerHTML = `<div class="col-12 text-center py-5"><h5>No products in this category. Explore other delights!</h5></div>`;
-            return;
-        }
-        let cards = '';
-        filtered.forEach(prod => {
-            cards += `
+        async function renderProducts() {
+            const container = document.getElementById("productsContainer");
+            const filtered = await filterProducts();
+            const toShow = filtered.slice(0, visibleCount);
+            if (toShow.length === 0) {
+                container.innerHTML =
+                    '<div class="col-12 text-center">No products</div>';
+                document.getElementById("loadMoreContainer").style.display = "none";
+                return;
+            }
+            let cards = "";
+            toShow.forEach((p) => {
+                //console.log(p);
+                let imgUrl =
+                    p.image || "https://placehold.co/600x500/F9EFE3/3B2A1F?text=AZA";
+                cards += `
                 <div class="col-lg-3 col-md-6" data-aos="fade-up">
-                    <div class="product-card" onclick="openProductPreview(${prod.id})">
-                        <img src="${prod.image}" class="product-img" alt="${prod.name}">
+                    <div class="product-card" onclick="openPreview(${p.id})">
+                        <!-- <img src="${imgUrl}" class="product-img" onerror="this.src='https://placehold.co/600x500/F9EFE3/3B2A1F?text=AZA'"> -->
+                        <img src="${imgUrl}" class="product-img" onerror="this.src='./image/Aza_Post.jpeg'">
                         <div class="product-body">
-                            <h5 class="product-title">${prod.name}</h5>
-                            <p class="small text-muted">${prod.desc.substring(0, 60)}...</p>
-                            <div class="d-flex justify-content-between align-items-center mt-2">
-                                <span class="price">₹${prod.price}</span>
-                                <button class="btn btn-add add-to-cart-${prod.id}" onclick="event.stopPropagation(); addToCart(${prod.id}, 1)"><i class="fas fa-shopping-cart me-1"></i> Add</button>
+                            <h6 class="product-title">${p.product_name}</h6>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">₹${p.price}</span>
+                                <button id="btn-${p.id}" class="btn-add" onclick="event.stopPropagation(); addToCart({name:'${p.product_name.replace(/'/g, "\\'")}', price:${p.price}},${p.id},1)">
+                                    <i class="fas fa-shopping-cart me-1"></i> Add
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
-            `;
-        });
-        container.innerHTML = cards;
-    }
-
-    // Product Preview Modal Logic
-    let currentPreviewProduct = null;
-    let previewQuantity = 1;
-    const previewModal = new bootstrap.Modal(document.getElementById('productPreviewModal'));
-    
-    window.openProductPreview = (productId) => {
-        const product = products.find(p => p.id === productId);
-        if (!product) return;
-        currentPreviewProduct = product;
-        previewQuantity = 1;
-        document.getElementById('previewQtyNum').innerText = previewQuantity;
-        document.getElementById('previewName').innerText = product.name;
-        document.getElementById('previewCategory').innerHTML = `<span class="badge bg-secondary bg-opacity-25 text-dark">${product.category.toUpperCase()}</span>`;
-        document.getElementById('previewDesc').innerHTML = product.fullDesc || product.desc;
-        document.getElementById('previewPrice').innerHTML = `₹${product.price}`;
-        document.getElementById('previewImg').src = product.image;
-        previewModal.show();
-    };
-
-    document.getElementById('previewQtyPlus')?.addEventListener('click', () => { previewQuantity++; document.getElementById('previewQtyNum').innerText = previewQuantity; });
-    document.getElementById('previewQtyMinus')?.addEventListener('click', () => { if(previewQuantity>1){ previewQuantity--; document.getElementById('previewQtyNum').innerText = previewQuantity; } });
-    document.getElementById('previewAddToCartBtn')?.addEventListener('click', () => {
-        if(currentPreviewProduct){ addToCart(currentPreviewProduct.id, previewQuantity); previewModal.hide(); showToast(`${previewQuantity} × ${currentPreviewProduct.name} added!`); }
-    });
-    document.getElementById('previewBuyNow')?.addEventListener('click', () => {
-        if(currentPreviewProduct){
-            const phone = "9747227042";
-            const msg = `🛍️ *Direct Order*%0A${currentPreviewProduct.name} x ${previewQuantity} = ₹${currentPreviewProduct.price * previewQuantity}%0A📍 Need airport/Pravasi delivery.`;
-            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
-            previewModal.hide();
+                `;
+            });
+            container.innerHTML = cards;
+            const loadMoreDiv = document.getElementById("loadMoreContainer");
+            if (filtered.length > visibleCount) loadMoreDiv.style.display = "block";
+            else loadMoreDiv.style.display = "none";
         }
-    });
-    function showToast(msg){ let t=document.createElement('div'); t.className='position-fixed bottom-0 end-0 p-3'; t.innerHTML=`<div class="bg-success text-white px-4 py-2 rounded-3 shadow">${msg}</div>`; document.body.appendChild(t); setTimeout(()=>t.remove(),2000); }
-
-    // WhatsApp order message (full cart)
-    function buildOrderMessage() {
-        if (cart.length === 0) return "Hello AZA, I'd like to place an order. Please guide me.";
-        let itemsList = "", totalAmt=0;
-        cart.forEach(item => { const prod = products.find(p=>p.id===item.id); if(prod){ const sub=prod.price*item.quantity; totalAmt+=sub; itemsList+=`• ${prod.name} x ${item.quantity} = ₹${sub}\n`; } });
-        return `🛍️ *New Order from AZA*%0A%0A📦 Items:%0A${encodeURIComponent(itemsList)}%0A💰 Total: ₹${totalAmt}%0A📍 Delivery: Need airport/Pravasi info. Thank you!`;
-    }
-    document.getElementById('whatsappOrderBtn')?.addEventListener('click', () => { if(cart.length===0) alert("Cart empty!"); else window.open(`https://wa.me/9747227042?text=${buildOrderMessage()}`, '_blank'); });
-    document.getElementById('pravasiOrderBtn')?.addEventListener('click', () => { window.open(`https://wa.me/9747227042?text=✨ Pravasi Box enquiry ✨ Need airport delivery options.`, '_blank'); });
-    document.getElementById('inquiryWhatsBtn')?.addEventListener('click', () => { const name=document.getElementById('inqName').value, phone=document.getElementById('inqPhone').value, msg=document.getElementById('inqMsg').value; const fullMsg=`Custom Hamper Inquiry%0AName: ${name||'-'}%0APhone: ${phone||'-'}%0ARequirement: ${msg||'Interested in hampers'}`; window.open(`https://wa.me/9747227042?text=${encodeURIComponent(fullMsg)}`, '_blank'); });
-    
-    // Category filter event listeners
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const category = btn.getAttribute('data-category');
-            filterProductsByCategory(category);
+        // Product list search handler
+        document.getElementById("productSearchInput")?.addEventListener("input", function () {
+            productSearchQuery = this.value;
+            visibleCount = 24; // Reset pagination when searching
+            renderProducts();
         });
-    });
-    
-    // Initial render
-    renderProductsGrid();
-    updateCartUI();
-    window.addToCart = addToCart;
-</script>
+        document.getElementById("loadMoreBtn")?.addEventListener("click", () => {
+            visibleCount += 24;
+            renderProducts();
+        });
+        function openPreview(id) {
+            const prod = allProducts.find((p) => p.id === id);
+            if (!prod) return;
+            console.log(prod);
+            currentPreviewProduct = prod;
+
+            previewQuantity = 1;
+            document.getElementById("previewQtyNum").innerText = "1";
+            document.getElementById("previewName").innerText = prod.product_name;
+            document.getElementById("previewCategory").innerHTML =
+                `<span class="badge bg-secondary">${prod.category}</span>`;
+            document.getElementById("previewDesc").innerHTML = prod.product_name;
+            document.getElementById("previewPrice").innerHTML = `₹${prod.price}`;
+            document.getElementById("previewImg").src =
+                prod.image || "https://placehold.co/600x500/F9EFE3/3B2A1F?text=AZA";
+            previewModal.show();
+        }
+        let currentPreviewProduct = null,
+            previewQuantity = 1;
+        const previewModal = new bootstrap.Modal(
+            document.getElementById("productPreviewModal"),
+        );
+        document.getElementById("previewQtyPlus")
+            ?.addEventListener("click", () => {
+                previewQuantity++;
+                document.getElementById("previewQtyNum").innerText = previewQuantity;
+            });
+        document.getElementById("previewQtyMinus")
+            ?.addEventListener("click", () => {
+                if (previewQuantity > 1) {
+                    previewQuantity--;
+                    document.getElementById("previewQtyNum").innerText =
+                        previewQuantity;
+                }
+            });
+        document.getElementById("previewAddToCartBtn")
+            ?.addEventListener("click", () => {
+                if (currentPreviewProduct) {
+                    addToCart(currentPreviewProduct, currentPreviewProduct.id, previewQuantity);
+                    previewModal.hide();
+                }
+            });
+        document.getElementById("previewBuyNow")
+            ?.addEventListener("click", () => {
+                if (currentPreviewProduct) {
+                    window.open(
+                        `https://wa.me/8943075000?text=${encodeURIComponent(`Direct Order: ${currentPreviewProduct.product_name} x${previewQuantity} = ₹${currentPreviewProduct.price * previewQuantity}`)}`,
+                        "_blank",
+                    );
+                    previewModal.hide();
+                }
+            });
+        document.querySelectorAll(".filter-btn").forEach((btn) => {
+            btn.addEventListener("click", () => {
+                currentFilter = btn.dataset.category;
+                visibleCount = 24;
+                document
+                    .querySelectorAll(".filter-btn")
+                    .forEach((b) => b.classList.remove("active"));
+                btn.classList.add("active");
+                renderProducts();
+            });
+        });
+        function buildOrderMessage() {
+            if (cart.length === 0) return "Hello, I'd like to place an order.";
+            let items = "",
+                total = 0;
+            cart.forEach((item) => {
+                const prod = allProducts.find((p) => p.product_name === item.product_name);
+                if (prod) {
+                    total += prod.price * item.qty;
+                    items += `• ${item.product_name} x ${item.qty} = ₹${prod.price * item.qty}\n`;
+                }
+            });
+            return `🛍️ *New Order from AZA*%0A%0A${encodeURIComponent(items)}%0ATotal: ₹${total}%0ALocation: Need Airport/Pravasi delivery.`;
+        }
+        document.getElementById("whatsappOrderBtn")
+            ?.addEventListener("click", () => {
+                if (cart.length === 0) alert("Cart empty!");
+                else
+                    window.open(
+                        `https://wa.me/8943075000?text=${buildOrderMessage()}`,
+                        "_blank",
+                    );
+            });
+        document.getElementById("pravasiOrderBtn")
+            ?.addEventListener("click", () => {
+                window.open(
+                    `https://wa.me/8943075000?text=✨ Pravasi Box enquiry: Need airport delivery options.`,
+                    "_blank",
+                );
+            });
+        document.getElementById("inquiryWhatsBtn")
+            ?.addEventListener("click", () => {
+                const name = document.getElementById("inqName").value,
+                    phone = document.getElementById("inqPhone").value,
+                    msg = document.getElementById("inqMsg").value;
+                window.open(
+                    `https://wa.me/8943075000?text=${encodeURIComponent(`Custom Hamper Inquiry\nName: ${name}\nPhone: ${phone}\nMessage: ${msg}`)}`,
+                    "_blank",
+                );
+            });
+        window.openPreview = openPreview;
+        window.addToCart = addToCart;
+        renderProducts();
+        updateCartUI();
+
+
+        // CRUD Products
+
+        async function addProduct(product) {
+            const file = product.image;
+              let imageUrl = '';
+
+            if (file) {
+
+                const extension =
+                    file.name.split('.').pop();
+
+                const fileName =
+                    `products/${crypto.randomUUID()}.${extension}`;
+
+                const { data: uploadData, error: uploadError } =
+                    await supabase.storage
+                        .from('product-images')
+                        .upload(fileName, file);
+
+                if (uploadError) {
+                    console.error(uploadError);
+                    return;
+                }
+
+                const { data } = supabase.storage
+                    .from('product-images')
+                    .getPublicUrl(fileName);
+
+                imageUrl = data.publicUrl;
+                // console.log('Bucket:', 'product-images');
+                // console.log('File:', file);
+                // console.log('File name:', fileName);
+            }
+            
+
+
+
+            const { error } = await supabase
+                .from('products')
+                .insert([
+                    {
+                        product_name: product.product_name,
+                        price: product.price,
+                        stock: product.stock,
+                        category: product.category,
+                        unit: product.unit,
+                        image: imageUrl
+                    }
+                ])
+
+            if (error) {
+                console.log(error)
+                alert('Insert failed')
+                return
+            }
+
+            alert('Product added')
+
+            renderProductsTable()
+        }
+        async function updateProduct(product,file) {
+
+              let imageUrl = product.image;
+              
+            // Upload new image if selected
+            if (file) {
+
+                // Delete old image (optional)
+         
+
+                if (product.image) {
+                    
+                    console.log(product.image);
+                    
+                    const oldPath = product.image
+                        .split('/storage/v1/object/public/product-images/')[1];
+
+                    if (oldPath) {
+                        await supabase.storage
+                            .from('product-images')
+                            .remove([oldPath]);
+                    }
+                }
+
+                const extension = file.name.split('.').pop();
+                const fileName = `products/${crypto.randomUUID()}.${extension}`;
+
+                const { error: uploadError } = await supabase.storage
+                    .from('product-images')
+                    .upload(fileName, file);
+
+                if (uploadError) {
+                    console.error(uploadError);
+                    return;
+                }
+
+                const { data } = supabase.storage
+                    .from('product-images')
+                    .getPublicUrl(fileName);
+
+                imageUrl = data.publicUrl;
+
+                
+            }
+            
+
+            const { error } = await supabase
+                .from('products')
+                .update({
+                    product_name: product.product_name,
+                    price: product.price,
+                    stock: product.stock,
+                    category: product.category,
+                    unit: product.unit,
+                    image: imageUrl
+
+                })
+                .eq('id', product.id)
+
+            if (error) {
+                console.log(error)
+                alert('Update failed')
+                return
+            }
+
+            alert('Updated successfully')
+
+            renderProductsTable()
+        }
+        async function deleteProduct(id) {
+            const { data: product } = await supabase
+                .from('products')
+                .select('image')
+                .eq('id', id)
+                .single();
+
+                const path = product.image
+                .split('/product-images/')[1];
+            console.log(path);
+                await supabase.storage
+                .from('product-images')
+                .remove([path]);
+
+
+            const { error } = await supabase
+                .from('products')
+                .delete()
+                .eq('id', id)
+
+            if (error) {
+                console.log(error)
+                alert('Delete failed')
+                return
+            }
+
+            alert('Deleted successfully')
+
+            renderProductsTable()
+        }
+        async function getProduct(id) {
+            const { data, error } = await supabase
+                .from('products')
+                .select('*')
+                .eq('id', id)
+                .single();
+
+            if (error) {
+                console.error(error);
+            } else {
+                console.log(data);
+            }
+            // console.log(data);
+            return data;
+        }
+
+        // CRUD Orders
+        // async function getAllOrders() { const tx = db.transaction('orders', 'readonly'); const store = tx.objectStore('orders'); return new Promise((resolve) => { const req = store.getAll(); req.onsuccess = () => resolve(req.result || []); }); }
+        // async function addOrder(order) { const tx = db.transaction('orders', 'readwrite'); return tx.objectStore('orders').add(order); }
+        // async function updateOrder(order) { const tx = db.transaction('orders', 'readwrite'); return tx.objectStore('orders').put(order); }
+
+
+        // ======================== ADMIN PANEL ========================
+        const ADMIN_PASSWORD = "aza";
+        let adminLoggedIn = false;
+        const adminLoginModal = new bootstrap.Modal(document.getElementById('adminLoginModal'));
+
+        if (window.location.href.includes('#admin')) {
+            console.log('admin page');
+            adminLoginModal.show()
+        }
+        // document.getElementById('showAdminBtn')?.addEventListener('click', () => adminLoginModal.show());
+        document.getElementById('submitAdminLogin')?.addEventListener('click', () => {
+            const pwd = document.getElementById('adminPassword').value;
+            if (pwd === ADMIN_PASSWORD) {
+                adminLoggedIn = true;
+                adminLoginModal.hide();
+                document.getElementById('customerSite').style.display = 'none';
+                document.getElementById('adminDashboard').style.display = 'block';
+                renderOrdersTable();
+                renderProductsTable();
+            } else { document.getElementById('loginError').classList.remove('d-none'); }
+        });
+        document.getElementById('logoutAdminBtn')?.addEventListener('click', () => {
+            adminLoggedIn = false;
+            document.getElementById('customerSite').style.display = 'block';
+            document.getElementById('adminDashboard').style.display = 'none';
+        });
+
+        async function renderOrdersTable() {
+            const orders = await getAllOrders();
+            const tbody = document.getElementById('ordersTableBody');
+            if (!tbody) return;
+            if (orders.length === 0) { tbody.innerHTML = '<tr><td colspan="7">No orders</td></tr>'; return; }
+            let html = '';
+            for (let order of orders) {
+                let statusClass = order.status === 'confirmed' ? 'status-confirmed' : (order.status === 'transporting' ? 'status-transporting' : 'status-delivered');
+                html += `<tr><td>#${order.id}</td><td>${order.customer}</td><td>${order.items.length} items</td><td>₹${order.total}</td><td><select class="form-select form-select-sm status-select" data-id="${order.id}" style="width:130px"><option ${order.status === 'confirmed' ? 'selected' : ''} value="confirmed">Confirmed</option><option ${order.status === 'transporting' ? 'selected' : ''} value="transporting">Transporting</option><option ${order.status === 'delivered' ? 'selected' : ''} value="delivered">Delivered</option></select></td><td>${new Date(order.date).toLocaleDateString()}</td><td><button class="btn btn-sm btn-outline-primary view-order" data-id="${order.id}">View</button></td></tr>`;
+            }
+            tbody.innerHTML = html;
+            document.querySelectorAll('.status-select').forEach(sel => {
+                sel.addEventListener('change', async (e) => {
+                    const orderId = parseInt(sel.dataset.id);
+                    const ordersList = await getAllOrders();
+                    const order = ordersList.find(o => o.id === orderId);
+                    if (order) { order.status = sel.value; await updateOrder(order); renderOrdersTable(); }
+                });
+            });
+            document.querySelectorAll('.view-order').forEach(btn => {
+                btn.addEventListener('click', async () => {
+                    const id = parseInt(btn.dataset.id);
+                    const ordersList = await getAllOrders();
+                    const order = ordersList.find(o => o.id === id);
+                    if (order) {
+                        let itemsHtml = '<ul>'; for (let it of order.items) { const prod = allProducts.find(p => p.id === it.id); itemsHtml += `<li>${prod?.name || 'Product'} x${it.qty}</li>`; } itemsHtml += '</ul>';
+                        document.getElementById('orderDetailBody').innerHTML = `<h6>Order #${order.id}</h6><p>Date: ${new Date(order.date).toLocaleString()}</p><p>Status: ${order.status}</p><p>Total: ₹${order.total}</p>${itemsHtml}`;
+                        new bootstrap.Modal(document.getElementById('orderDetailModal')).show();
+                    }
+                });
+            });
+        }
+
+        async function renderProductsTable() {
+            const productsList = await ListProduct();
+            const tbody = document.getElementById('productsTableBody');
+            if (!tbody) return;
+            let html = '';
+            for (let p of productsList) {
+                html += `<tr><td><img src="${p.image}" style="width:50px;height:50px;object-fit:contain" onerror="this.src='https://placehold.co/100x100'"></td><td>${p.product_name}</td><td>${p.category}</td><td>₹${p.price}</td><td><button class="btn btn-sm btn-warning edit-product" data-id="${p.id}"><i class="fas fa-edit"></i></button> <button class="btn btn-sm btn-danger delete-product" data-id="${p.id}"><i class="fas fa-trash"></i></button></td></tr>`;
+            }
+            tbody.innerHTML = html;
+            document.querySelectorAll('.edit-product').forEach(btn => {
+                btn.addEventListener('click', async () => {
+                    const id = parseInt(btn.dataset.id);
+                    const prod = await getProduct(id);
+                     console.log(prod);
+                    if (prod) {
+                        document.getElementById('productModalTitle').innerText = 'Edit Product';
+                        document.getElementById('productId').value = prod.id;
+                        document.getElementById('prodName').value = prod.product_name;
+                        document.getElementById('prodCategory').value = prod.category;
+                        document.getElementById('prodPrice').value = prod.price;
+                        document.getElementById('prodStock').value = prod.stock;
+                        document.getElementById('prodUnit').value = prod.unit;
+                        document.getElementById('oldUrl').value = prod.image;
+                        document.getElementById('preview').src = prod.image;
+                        document.getElementById('preview').style.display = 'block';
+                        new bootstrap.Modal(document.getElementById('productModal')).show();
+                    }
+                });
+            });
+            document.querySelectorAll('.delete-product').forEach(btn => {
+                btn.addEventListener('click', async () => {
+                    if (confirm('Delete permanently?')) {
+                        const id = parseInt(btn.dataset.id);
+                        await deleteProduct(id);
+                        renderProductsTable();
+                        renderProducts();
+                    }
+                });
+            });
+        }
+
+        document.getElementById('addProductBtn')?.addEventListener('click', () => {
+            document.getElementById('productModalTitle').innerText = 'Add Product';
+            document.getElementById('productId').value = '';
+            document.getElementById('prodName').value = '';
+            document.getElementById('prodCategory').value = '';
+            document.getElementById('prodPrice').value = '';
+            document.getElementById('prodStock').value = '';
+            document.getElementById('prodUnit').value = '';
+            document.getElementById('oldUrl').value = '';
+            document.getElementById('preview').src = '';
+            document.getElementById('preview').style.display = 'none';
+            document.getElementById('prodImage').value = '';
+            new bootstrap.Modal(document.getElementById('productModal')).show();
+        });
+        document.getElementById('saveProductBtn')?.addEventListener('click', async () => {
+            const id = document.getElementById('productId').value;
+            const product_name = document.getElementById('prodName').value;
+            const category = document.getElementById('prodCategory').value;
+            const price = parseFloat(document.getElementById('prodPrice').value);
+            const stock = parseFloat(document.getElementById('prodStock').value);
+            const unit = document.getElementById('prodUnit').value;
+            const image = document.getElementById('prodImage').files[0];
+            const oldImageUrl = document.getElementById('oldUrl').value;
+            // if (!image) image = `https://placehold.co/600x500/F9EFE3/3B2A1F?text=${encodeURIComponent(product_name.substring(0, 15))}`;
+            if (id) {
+                const existing = await getProduct(parseInt(id));
+                if (existing) {
+                    existing.product_name = product_name; existing.price = price; existing.stock = stock; existing.unit = unit; existing.category = category; existing.image = oldImageUrl;
+                    await updateProduct(existing,image);
+                }
+            } else {
+                await addProduct({ product_name, category, price, image, stock, unit });
+            }
+            bootstrap.Modal.getInstance(document.getElementById('productModal')).hide();
+            renderProductsTable();
+            renderProducts();
+        });
+
+        // Tab switching
+        document.querySelectorAll('[data-tab]').forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+                const tabName = tab.dataset.tab;
+                document.getElementById('ordersTab').style.display = tabName === 'orders' ? 'block' : 'none';
+                document.getElementById('productsTab').style.display = tabName === 'products' ? 'block' : 'none';
+                document.querySelectorAll('[data-tab]').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                if (tabName === 'orders') renderOrdersTable();
+                else renderProductsTable();
+            });
+        });
+    </script>
 </body>
 </html>
