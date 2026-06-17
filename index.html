@@ -14,8 +14,8 @@
         href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap"
         rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
- <link href="https://cdn.datatables.net/v/bs5/dt-2.3.8/b-3.2.6/fh-4.0.6/datatables.min.css" rel="stylesheet" integrity="sha384-zkImUNcKeAj7yYfFkIXsjg+7WUtPhsPWBj1MdlSsxIyPkxfXGSMJNYKUJ5QnheOW" crossorigin="anonymous">
-<script src="https://cdn.datatables.net/v/bs5/dt-2.3.8/b-3.2.6/fh-4.0.6/datatables.min.js" integrity="sha384-KzIuZGi/KXtcHLZXB3NzztaM4EsvXHIZmgJOJHz65r9vYx0GZNFaTxP7hVtQbAI0" crossorigin="anonymous"></script>
+ <!-- <link href="https://cdn.datatables.net/v/bs5/dt-2.3.8/b-3.2.6/fh-4.0.6/datatables.min.css" rel="stylesheet" integrity="sha384-zkImUNcKeAj7yYfFkIXsjg+7WUtPhsPWBj1MdlSsxIyPkxfXGSMJNYKUJ5QnheOW" crossorigin="anonymous">
+<script src="https://cdn.datatables.net/v/bs5/dt-2.3.8/b-3.2.6/fh-4.0.6/datatables.min.js" integrity="sha384-KzIuZGi/KXtcHLZXB3NzztaM4EsvXHIZmgJOJHz65r9vYx0GZNFaTxP7hVtQbAI0" crossorigin="anonymous"></script> -->
     <link rel="icon" type="image/png" href="./image/aza_logo_png.png" />
     <style>
         :root {
@@ -888,11 +888,11 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.datatables.net/v/bs5/dt-2.3.8/b-3.2.6/fh-4.0.6/datatables.min.js" integrity="sha384-KzIuZGi/KXtcHLZXB3NzztaM4EsvXHIZmgJOJHz65r9vYx0GZNFaTxP7hVtQbAI0" crossorigin="anonymous"></script>
     
-<script>
+<!-- <script>
     $(document).ready(function () {
         $('#productsTable').DataTable();
     });
-</script>
+</script> -->
     <script type="module">
         AOS.init({ duration: 800, once: true });
 
@@ -1116,7 +1116,7 @@
             ?.addEventListener("click", () => {
                 if (currentPreviewProduct) {
                     window.open(
-                        `https://wa.me/8943075000?text=${encodeURIComponent(`Direct Order: ${currentPreviewProduct.product_name} x${previewQuantity} = ₹${currentPreviewProduct.price * previewQuantity}`)}`,
+                        `https://wa.me/918943075000?text=${encodeURIComponent(`Direct Order: ${currentPreviewProduct.product_name} x${previewQuantity} = ₹${currentPreviewProduct.price * previewQuantity}`)}`,
                         "_blank",
                     );
                     previewModal.hide();
@@ -1137,28 +1137,32 @@
             if (cart.length === 0) return "Hello, I'd like to place an order.";
             let items = "",
                 total = 0;
+                let custName = prompt("Enter your name");
+                let custPhone = prompt("Enter your Contact number");
             cart.forEach((item) => {
-                const prod = allProducts.find((p) => p.product_name === item.product_name);
+                const prod = allProducts.find((p) => p.id === item.id);
+                
                 if (prod) {
                     total += prod.price * item.qty;
-                    items += `• ${item.product_name} x ${item.qty} = ₹${prod.price * item.qty}\n`;
+                    items += `• ${prod.product_name} x ${item.qty} = ₹${prod.price * item.qty}\n`;
                 }
             });
-            return `🛍️ *New Order from AZA*%0A%0A${encodeURIComponent(items)}%0ATotal: ₹${total}%0ALocation: Need Airport/Pravasi delivery.`;
+            
+            return `🛍️ *New Order from ${custName || "AZA"}*%0A%0A${encodeURIComponent(items)}%0ATotal: ₹${total}%0AContact Number: ${custPhone || ""}%0ALocation: Need Airport/Pravasi delivery.`;
         }
         document.getElementById("whatsappOrderBtn")
             ?.addEventListener("click", () => {
                 if (cart.length === 0) alert("Cart empty!");
                 else
                     window.open(
-                        `https://wa.me/8943075000?text=${buildOrderMessage()}`,
+                        `https://wa.me/918943075000?text=${buildOrderMessage()}`,
                         "_blank",
                     );
             });
         document.getElementById("pravasiOrderBtn")
             ?.addEventListener("click", () => {
                 window.open(
-                    `https://wa.me/8943075000?text=✨ Pravasi Box enquiry: Need airport delivery options.`,
+                    `https://wa.me/918943075000?text=✨ Pravasi Box enquiry: Need airport delivery options.`,
                     "_blank",
                 );
             });
@@ -1168,7 +1172,7 @@
                     phone = document.getElementById("inqPhone").value,
                     msg = document.getElementById("inqMsg").value;
                 window.open(
-                    `https://wa.me/8943075000?text=${encodeURIComponent(`Custom Hamper Inquiry\nName: ${name}\nPhone: ${phone}\nMessage: ${msg}`)}`,
+                    `https://wa.me/918943075000?text=${encodeURIComponent(`Custom Hamper Inquiry\nName: ${name}\nPhone: ${phone}\nMessage: ${msg}`)}`,
                     "_blank",
                 );
             });
